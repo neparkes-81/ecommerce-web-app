@@ -41,9 +41,19 @@ class UsersRepositroy {
         return records.find(record => record.id === id); 
     }
 
-    async getOneBy( filter, searchTerm){
+    async getOneBy( filters){
         const records = await this.getAll();
-        return records.find(record => record[filter] === searchTerm); 
+        for(let record of records){
+            let found = true;
+            for(let key in filters){
+                if(record[key] !== filters[key]){
+                    found = false;
+                }
+            }
+            if(found){
+                return record;
+            }
+        }
     }
 
     async delete(id) {
@@ -67,9 +77,9 @@ class UsersRepositroy {
 
 const test = async () => {
     const repo = new UsersRepositroy('users.json');
-    await repo.update('3f310757', {password: 'password'});
-    // const user = await repo.getOneBy('password', 'word');
-    // console.log(user);
+   // await repo.update('3f310757', {password: 'password'});
+    const user = await repo.getOneBy({password: 'password'});
+    console.log(user);
 }
 
 test();
