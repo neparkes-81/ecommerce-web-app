@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 // adds a property of session to our req object
 const cookieSession = require('cookie-session');
 const authRouter = require('./routes/admin/auth');
+const productsRouter = require('./routes/admin/products');
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(cookieSession({
     keys: ['sldknlfknsldnflk']
 }));
 app.use(authRouter);
+app.use(productsRouter);
 
 app.listen(3000, () => {
     console.log('listening')
