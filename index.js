@@ -20,7 +20,11 @@ app.use(adminProductsRouter);
 app.use(productsRouter);
 app.use(cartsRouter);
 
+if(process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+} 
 
-app.listen(3000, () => {
-    console.log('listening')
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`);
 })
