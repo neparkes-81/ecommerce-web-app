@@ -50,7 +50,7 @@ module.exports = ({ content }) => {
                       <a href="/"><i class="fa fa-star"></i> Products</a>
                     </div>
                     <div class="navbar-item">
-                      <a href="/cart"><i class="fa fa-shopping-cart"></i> Cart</a>
+                      <a href="/shopping-cart"><i class="fa fa-shopping-cart"></i> Cart</a>
                     </div>
                   </div>
                 </div>

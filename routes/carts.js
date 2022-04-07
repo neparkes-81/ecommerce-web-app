@@ -7,7 +7,7 @@ const cartShowTemplate = require('../views/carts/show');
 const router = express.Router();
 
 // Recive post request to add item to cart
-router.post('/cart/products', async (req, res) => {
+router.post('/shopping-cart/products', async (req, res) => {
     // Figure out if cart is in existence
     let cart;
     if(!req.session.cartId){
@@ -32,10 +32,14 @@ router.post('/cart/products', async (req, res) => {
         items: cart.items
     });
 
-    res.redirect('/cart');
+    res.redirect('/shopping-cart');
 });
 
-router.get('/cart', async (req, res) => {
+router.get('/cart', (req, res) => {
+    res.send('found sdog')
+})
+
+router.get('/shopping-cart', async (req, res) => {
     if(!req.session.cartId){
         return res.redirect('/');
     }
@@ -50,14 +54,13 @@ router.get('/cart', async (req, res) => {
 });
 
 // Recive post to delete item from cart
-router.post('/cart/products/delete', async(req,res) => {
+router.post('/shopping-cart/products/delete', async(req,res) => {
     const { itemId } = req.body;
     const cart = await cartsRepo.getOne(req.session.cartId);
 
     const items = cart.items.filter(item => item.id != itemId);
+    await cartsRepo.update(req.session.cartId, { items });
 
-    await cartsRepo.update(req.session.cartId, { item });
-
-    res.redirect('/cart');
+    res.redirect('/shopping-cart');
 });
 module.exports = router;
