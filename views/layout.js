@@ -5,11 +5,13 @@ module.exports = ({ content }) => {
         <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Shop</title>
-          
+          <title>Planter and Pestle</title>
+          <link rel="icon" href="/images/PlanterAndPestle-Favicon.ico">
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-          <link href="/css/main.css" rel="stylesheet">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"></link>
+          <link href="/css/main.css" rel="stylesheet">
+          
+          
         </head>
   
         <body>
@@ -19,20 +21,18 @@ module.exports = ({ content }) => {
                 <div>
                   <ul class="social">
                     <li>
-                      <a href=""><i class="fa fa-phone"></i>+1 555 987 6543</a>
-                    </li>
-                    <li>
-                      <a href=""><i class="fa fa-envelope"></i> shop@myshop.com</a>
-                    </li>
+                    <a class="logo" href=""><img src="/images/Planter.png" /></a>
                   </ul>
                 </div>
                 <div>
                   <ul class="social">
-                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href=""><i class="fab fa-dribbble"></i></a></li>
-                    <li><a href=""><i class="fab fa-google-plus"></i></a></li>
+                    <li>
+                      <a href=""><i class="fa fa-phone"></i>+1 123 456 7890</a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fa fa-envelope"></i> shop@myshop.com</a>
+                    </li>
+                  
                   </ul>
                 </div>
               </div>
@@ -40,9 +40,7 @@ module.exports = ({ content }) => {
             <nav class="navbar navbar-bottom">
               <div class="container navbar-container">
                 <div>
-                  <a href="/">
-                    <h3 class="title">EComm Shop</h3>
-                  </a>
+                 
                 </div>
                 <div class="navbar-item">
                   <div class="navbar-buttons">
@@ -59,6 +57,17 @@ module.exports = ({ content }) => {
           </header>
   
           ${content}
+          
+          <footer>
+            <ul class="social">
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fab fa-dribbble"></i></a></li>
+                <li><a href=""><i class="fab fa-google-plus"></i></a></li>
+            </ul>
+            <p>&copy; Copyright 2022 Planter & Pestle</p>
+        </footer>
         </body>
       </html>
     `;

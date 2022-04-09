@@ -5,10 +5,11 @@ module.exports = ({ content }) => {
         <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Shop</title>
+          <title>Admin | Planter and Pestle</title>
+          <link rel="icon" href="/images/PlanterAndPestle-Favicon.ico">
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-          <link href="/css/main.css" rel="stylesheet">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"></link>
+          <link href="/css/main.css" rel="stylesheet">
         </head>
   
         <body class="admin">
@@ -33,6 +34,9 @@ module.exports = ({ content }) => {
           <div class="container">
             ${content}
           </div>
+          <footer>
+            <p>&copy; Copyright 2022 Planter & Pestle</p>
+          </footer>
         </body>
       </html>
     `;

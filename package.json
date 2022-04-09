@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bulma-carousel": "^4.0.24",
     "cookie-session": "^2.0.0",
     "express": "^4.17.3",
     "express-validator": "^6.14.0",

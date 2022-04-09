@@ -29,12 +29,15 @@ module.exports = ({ products }) => {
 
   return layout({
     content: `
+     
       <section class="banner">
-        <div class="container">
-          <div class="columns is-centered">
-            <img src="/images/banner.jpg" />
+          <div class="columns is-centered banner-column">
+          <img src="/images/chris-abney-qLW70Aoo8BE-unsplash.jpg" alt="">
+            <div class="banner-text">
+              <h1>Welcome to Planter & Pestle</h1>
+              <h3>We have a wide selection of flora to add to your home decor!</h3>
+            </div>
           </div>
-        </div>
       </section>
       
       <section>
@@ -42,7 +45,7 @@ module.exports = ({ products }) => {
           <div class="columns">
             <div class="column "></div>
             <div class="column is-four-fifths">
-              <div>
+              <div class="title-div">
                 <h2 class="title text-center">Featured Items</h2>
                 <div class="columns products">
                   ${renderedProducts}  
